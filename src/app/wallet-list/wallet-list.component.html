@@ -1,0 +1,11 @@
+<div class="p-grid p-justify-left">
+  <p-card header="{{ wallet.name }}" subheader="{{wallet.description}}" [style]="{width: '360px'}" styleClass="ui-card-shadow" 
+  
+    *ngFor="let wallet of wallets; index as walletId" class="p-col-4">
+
+    <p *ngFor="let cartao of wallet.cartoes; index as cardId">
+      <i class="pi pi-id-card" style="font-size: 1.5em"></i>{{cartao.numero}}
+      <i class="pi pi-calendar-plus"></i>{{cartao.validade}}
+    </p>
+  </p-card>
+</div>

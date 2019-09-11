@@ -1,0 +1,20 @@
+<div class="p-grid">
+  <div class="p-sm-offset-1 p-md-offset-1"><h2>Novo Flow</h2></div>
+</div>
+
+<div class="p-grid">
+  <div class="p-md-offset-1 p-md-1"><label>Nome</label></div>
+  <div class="p-md-3"><input type="text" pInputText placeholder=""></div>
+</div>
+
+<div class="p-grid" *ngFor="let stepItem of newFlow; index as stepId">
+  <div class="p-md-offset-2 p-md-3"><input type="text" pInputText disabled value="{{stepItem.name}}"></div>
+  <div class="p-md-1"><button pButton  type="button" icon="pi pi-minus" iconPos="left" (click)="removeToFlowList(stepId)"></button></div>
+</div>  
+
+<div class="p-grid">
+  <div class="p-md-offset-1 p-md-1"><label>Passo</label></div>
+  <div class="p-md-3"><p-dropdown [options]="steps" [(ngModel)]="selectedStep" placeholder="Step" optionLabel="name" [showClear]="true"></p-dropdown></div>
+  <div class="p-col p-md-1"><button pButton [disabled]="!selectedStep" type="button" icon="pi pi-plus" iconPos="left" (click)="addToFlowList()"></button></div>
+</div>
+

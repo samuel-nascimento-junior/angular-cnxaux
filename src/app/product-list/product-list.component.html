@@ -1,0 +1,23 @@
+<div class="">
+  <h2>Products</h2>
+</div>
+<div class="p-grid p-justify-center">
+
+  <div *ngFor="let product of products; index as productId" class="p-col-2">
+    <h3>
+      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+        {{product.name}}
+      </a>
+    </h3>
+    <p *ngIf="product.description">
+      {{product.description}}
+    </p>
+
+    <button pButton (click)="share()" type="button" icon="pi pi-check" iconPos="left" label="Share"></button>
+    
+    <app-product-alerts
+      [product]="product" 
+      (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+</div>
