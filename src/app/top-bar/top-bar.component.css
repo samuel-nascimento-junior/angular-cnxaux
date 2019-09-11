@@ -1,3 +1,8 @@
 #main-top-bar {
   background-color: #545b61 !important;
+  margin-bottom: 10px;
+}
+
+#main-logo{
+  margin: 10px 10px;
 }
