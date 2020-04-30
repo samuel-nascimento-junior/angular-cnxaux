@@ -16,7 +16,7 @@
     "core-js": "2.6.9",
     "jasmine-core": "3.4.0",
     "jasmine-marbles": "0.6.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "popper.js": "1.15.0",
     "primeicons": "1.0.0",
     "primeng": "7.1.3",
